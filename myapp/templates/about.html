@@ -1,0 +1,36 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
+    <style>
+            body {
+              font-family: 'Nanum Pen Script', cursive;
+              text-align: center;
+              background-color: #ffffff;
+			background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+            }
+
+            h1{
+                font-size: 100px;
+            }
+
+            p{
+                font-size: 40px;
+            }
+            
+            a{
+                font-size: 30px;
+            }
+    </style>
+</head>
+
+<body>
+<br>
+<h1> ABOUT </h1>
+
+<p> 워드카운트 페이지입니다. 원하시는 텍스트의 글자수를 세어보세요!</p>
+
+<a href="{% url 'home' %}">Home으로 돌아가기 </a>
+</body>
