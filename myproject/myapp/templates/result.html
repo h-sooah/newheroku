@@ -1,0 +1,64 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap&subset=korean" rel="stylesheet">
+    <style>
+            body {
+              font-family: 'Nanum Pen Script', cursive;
+              text-align: center;
+              background-color: #ffffff;
+			background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+			background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 129, 0, 0.35));
+            }
+            
+            h1 {
+                font-size: 70px;
+            }
+
+            h2 {
+                font-size: 50px;
+            }
+
+            td, p {
+                font-size: 30px;
+            }
+
+    </style>
+</head>
+
+<body>
+    <br>
+    <h1> 입력하신 텍스트는 <span style="color: navy;">"{{ total }}"개의 단어</span> 로 구성되어 있습니다. </h1>
+
+    <br>
+    <div style="height: auto; width: auto; border:1px solid black;"> 
+    <h2> 입력한 텍스트 : </h2>
+    <p>{{ full }}</p>
+    </div>
+
+    <br>
+
+    <h2> 단어 카운트 : </h2>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">WORD</th>
+            <th scope="col">COUNT</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for word, countTotal in dictionary %}
+        <tr>
+            <th scope="row">#</th>
+            <td>{{ word }}</td>
+            <td>{{ countTotal }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href = "{% url 'home' %}" class="btn btn-outline-dark" style="width:80pt; font-size: 15pt;"> 다시하기 </a>
+
+</body>
