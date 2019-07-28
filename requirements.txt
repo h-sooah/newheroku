@@ -31,7 +31,6 @@ pathspec==0.5.9
 Pillow==6.0.0
 pipenv==2018.11.26
 psycopg2-binary==2.8.3
-pyad==0.5.15
 pyasn1==0.4.5
 pyasn1-modules==0.2.5
 pycparser==2.19
